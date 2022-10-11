@@ -17,5 +17,10 @@
   http://localhost:8081/bankAccounts/{id}
 + example
   http://localhost:8081/bankAccounts/be2884a6-e296-420e-a5cd-9c6214a85b66
+### Add depenency 
+https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui
+* springdoc OpenAPI UI Version : 1.6.11
 
+### Test Rest API
+http://localhost:8081/swagger-ui/index.html
 

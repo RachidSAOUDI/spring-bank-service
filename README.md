@@ -9,3 +9,13 @@
 * H2 Database 
 * Lombok
 * Spring for GraphQL
+
+### test on localhost
+* for test Account List : 
+  http://localhost:8081/bankAccounts
+* for test One Account :
+  http://localhost:8081/bankAccounts/{id}
++ example
+  http://localhost:8081/bankAccounts/be2884a6-e296-420e-a5cd-9c6214a85b66
+
+

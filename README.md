@@ -33,5 +33,8 @@ http://localhost:8081/bankAccounts/search/findByType?type=SAVING_ACCOUNT
 or
 http://localhost:8081/bankAccounts/search/findByType?type=CURRENT_ACCOUNT
 
+### link after change Method findByType
+http://localhost:8081/bankAccounts/search/byType?t=SAVING_ACCOUNT
+
 ### for test projection :
 http://localhost:8081/bankAccounts?projection=p1

@@ -27,3 +27,8 @@ http://localhost:8081/swagger-ui/index.html
 
 ### Add Dependency 
 Spring Data Rest
+
+### for test search method example : 
+http://localhost:8081/bankAccounts/search/findByType?type=SAVING_ACCOUNT
+or
+http://localhost:8081/bankAccounts/search/findByType?type=CURRENT_ACCOUNT

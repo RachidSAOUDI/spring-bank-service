@@ -3,6 +3,7 @@ package ma.usmba.springbankservice.web;
 import ma.usmba.springbankservice.dto.BankAccountRequestDTO;
 import ma.usmba.springbankservice.dto.BankAccountResponseDTO;
 import ma.usmba.springbankservice.entities.BankAccount;
+import ma.usmba.springbankservice.mappers.AccountMapper;
 import ma.usmba.springbankservice.repositories.BankAccountRepository;
 import ma.usmba.springbankservice.service.AccountService;
 import org.springframework.web.bind.annotation.*;
@@ -15,10 +16,12 @@ import java.util.List;
 public class AccountRestController {
     private BankAccountRepository bankAccountRepository;
     private AccountService accountService;
+    private AccountMapper accountMapper;
 
-    public AccountRestController(BankAccountRepository bankAccountRepository, AccountService accountService) {
+    public AccountRestController(BankAccountRepository bankAccountRepository, AccountService accountService, AccountMapper accountMapper) {
         this.bankAccountRepository = bankAccountRepository;
         this.accountService = accountService;
+        this.accountMapper = accountMapper;
     }
 
     @GetMapping("/bankAccounts")

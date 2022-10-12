@@ -32,3 +32,6 @@ Spring Data Rest
 http://localhost:8081/bankAccounts/search/findByType?type=SAVING_ACCOUNT
 or
 http://localhost:8081/bankAccounts/search/findByType?type=CURRENT_ACCOUNT
+
+### for test projection :
+http://localhost:8081/bankAccounts?projection=p1

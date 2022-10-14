@@ -41,3 +41,17 @@ http://localhost:8081/bankAccounts?projection=p1
 
 ### for test GraphQL
 http://localhost:8081/graphiql?path=/graphql
+
+### Query Example :
+* example1 :
+query{
+  bankAccountById(id:"ffd1f270-b2bb-4f60-a05d-58c3dfbd3885"){
+    balance, currency, type
+  }
+}
+* Example 2:
+  query{
+  accountsList{
+  id, balance, currency, type
+  }
+  }

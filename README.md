@@ -4,7 +4,7 @@
 * Spring Boot version = 2.7.4
 * Jar
 ### 2. Dependencies
-* Spring We 
+* Spring Web 
 * Spring Data JPA
 * H2 Database 
 * Lombok
@@ -38,3 +38,6 @@ http://localhost:8081/bankAccounts/search/byType?t=SAVING_ACCOUNT
 
 ### for test projection :
 http://localhost:8081/bankAccounts?projection=p1
+
+### for test GraphQL
+http://localhost:8081/graphiql?path=/graphql

@@ -61,6 +61,30 @@ accountsList {
 id, balance
 }
 }
+## select Query 
+query {
+accountsList {
+id, balance, customer {name}
+}
+}
+## select Query 
+query {
+accountsList {
+id, balance, customer {name, bankAccounts{id}}
+}
+}
+## select Query 
+query {
+customers{
+id, name
+}
+}
+## Query 
+query {
+    customers{
+      id, name, bankAccounts {balance}
+    }
+}
 
 ### exemple mutation GraphQL
 mutation($t : String, $b : Float, $c : String) {

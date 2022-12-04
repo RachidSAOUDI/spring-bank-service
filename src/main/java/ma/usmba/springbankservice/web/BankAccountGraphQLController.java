@@ -3,7 +3,9 @@ package ma.usmba.springbankservice.web;
 import ma.usmba.springbankservice.dto.BankAccountRequestDTO;
 import ma.usmba.springbankservice.dto.BankAccountResponseDTO;
 import ma.usmba.springbankservice.entities.BankAccount;
+import ma.usmba.springbankservice.entities.Customer;
 import ma.usmba.springbankservice.repositories.BankAccountRepository;
+import ma.usmba.springbankservice.repositories.CustomerRepository;
 import ma.usmba.springbankservice.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
@@ -19,6 +21,8 @@ public class BankAccountGraphQLController {
     private BankAccountRepository bankAccountRepository;
     @Autowired
     private AccountService accountService;
+    @Autowired
+    private CustomerRepository customerRepository;
     @QueryMapping
     public List<BankAccount> accountsList(){
         return bankAccountRepository.findAll();
@@ -39,11 +43,10 @@ public class BankAccountGraphQLController {
     @MutationMapping
     public void deleteAccount(@Argument String id){
         bankAccountRepository.deleteById(id);
-//        return true;
+    }
+    @QueryMapping
+    public List<Customer> customers(){
+        return customerRepository.findAll();
     }
 
 }
-/* pour version java >=14
-record BankAccountDTO(Double balance, String type, String currency){
-}
- */

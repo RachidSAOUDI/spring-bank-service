@@ -55,3 +55,16 @@ query{
   id, balance, currency, type
   }
   }
+
+### exemple mutation GraphQL
+mutation($t : String, $b : Float, $c : String) {
+addAccount(bankAccount : {
+type : $t,
+balance : $b,
+currency : $c
+}){
+id, type, balance
+}
+}
+## call query
+{"t": "CURRENT_ACCOUNT", "b": 4000, "c": "USD"}

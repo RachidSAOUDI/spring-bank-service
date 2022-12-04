@@ -55,6 +55,12 @@ query{
   id, balance, currency, type
   }
   }
+## select query
+query{
+accountsList {
+id, balance
+}
+}
 
 ### exemple mutation GraphQL
 mutation($t : String, $b : Float, $c : String) {
@@ -68,3 +74,19 @@ id, type, balance
 }
 ## call query
 {"t": "CURRENT_ACCOUNT", "b": 4000, "c": "USD"}
+## Update Query 
+mutation($id : String, $t : String, $b : Float, $c : String) {
+updateAccount(id : $id, bankAccount : {
+type : $t,
+balance : $b,
+currency : $c
+}){
+id, type, balance
+}
+}
+## send Variables 
+{"t": "CURRENT_ACCOUNT", "b": 3200, "c": "USD", "id": "28260fec-dac5-4ee9-8377-fa32e4e029ad"}
+## delete Query
+mutation {
+deleteAccount(id : "dc226d18-d01e-4ba7-9a5a-64267ad748d1")
+}

@@ -79,6 +79,12 @@ customers{
 id, name
 }
 }
+## Query GraphQL 
+query {
+customers{
+id, name, bankAccounts {balance, id, type}
+}
+}
 ## Query 
 query {
     customers{
